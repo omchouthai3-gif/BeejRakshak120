@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Plus Jakarta Sans', 'Noto Sans Devanagari', 'Noto Sans Kannada', sans-serif;
+    --font-body: 'DM Sans', 'Noto Sans Devanagari', 'Noto Sans Kannada', sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #f3f5f0;
+    color: #112217;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.surface-card {
+  background-color: #ffffff;
+  border: 1px solid #e1e6db;
+  box-shadow:
+    0 1px 2px rgba(17, 34, 23, 0.04),
+    0 10px 28px -16px rgba(17, 34, 23, 0.08);
+}
+
+@keyframes scanSweep {
+  0% {
+    transform: translateY(-48px);
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(48px);
+    opacity: 0.15;
+  }
+}
+
+.animate-scan-sweep {
+  animation: scanSweep 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes voiceWave {
+  0%, 100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-voice-bar-1 {
+  animation: voiceWave 0.75s ease-in-out infinite;
+}
+.animate-voice-bar-2 {
+  animation: voiceWave 0.75s ease-in-out 0.15s infinite;
+}
+.animate-voice-bar-3 {
+  animation: voiceWave 0.75s ease-in-out 0.3s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

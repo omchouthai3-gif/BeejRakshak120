@@ -1,0 +1,6 @@
+{
+  "name": "BeejRakshak",
+  "description": "Offline-first AI seed and fertilizer verification for Indian farmers. QR traceability, packaging inspection, regional voice verdicts, and geo-tagged inspector alerts.",
+  "requestFramePermissions": ["camera", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
